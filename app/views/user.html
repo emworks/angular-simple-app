@@ -1,0 +1,40 @@
+<div class="panel panel-default" ng-show="user.id">
+  <div class="panel-body">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="https://vk.com/images/camera_400.png" alt="" width="100">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{user.username}}</h4>
+        <h5>{{user.name}}, {{user.company.name}}</h5>
+        <p>
+          <span class="glyphicon glyphicon-earphone"></span>
+          <a href="tel:{{user.phone}}">{{user.phone}}</a><br>
+          <span class="glyphicon glyphicon-envelope"></span>
+          <a href="mailto:{{user.email}}">{{user.email}}</a><br>
+          <span class="glyphicon glyphicon-globe"></span>
+          <a href="{{user.website}}" target="_blank">{{user.website}}</a><br>
+          <span class="glyphicon glyphicon-map-marker"></span>
+          <span ng-click="showMap()">Show map</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul ng-show="albums[0]">
+  <li ng-repeat="album in albums">
+    <a href="#/albums/{{album.id}}">{{album.title}}</a>
+  </li>
+</ul>
+
+<div class="list-group" ng-show="posts[0]">
+  <a class="list-group-item" ng-repeat="post in posts" href="#/posts/{{post.id}}">
+    <h3>{{post.title}}</h3>
+    <p>
+      {{post.body}}
+    </p>
+  </a>
+</div>

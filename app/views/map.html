@@ -1,0 +1,7 @@
+<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+  <ui-gmap-marker idKey='data.id' coords='map.center'>
+    <ui-gmap-window coords='map.center' show='true'>
+      {{data.address.city}}, {{data.address.street}}
+    </ui-gmap-window>
+  </ui-gmap-marker>
+</ui-gmap-google-map>

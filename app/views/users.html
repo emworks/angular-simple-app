@@ -1,0 +1,30 @@
+<div class="table-responsive" ng-show="users[0]">
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Username</td>
+        <td>Name</td>
+        <td>Company</td>
+        <td>Website</td>
+        <td>Email</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>
+          <a href="#/users/{{user.id}}">{{user.name}}</a>
+        </td>
+        <td>{{user.company.name}}</td>
+        <td>
+          <a href="{{user.website}}" target="_blank">{{user.website}}</a>
+        </td>
+        <td>
+          <a href="mailto:{{user.email}}">{{user.email}}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

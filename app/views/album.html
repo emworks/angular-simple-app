@@ -1,0 +1,7 @@
+<div class="row">
+  <div ng-repeat="photo in photos" class="col-xs-3 col-md-2">
+    <a ng-click="openLightboxModal($index)" class="thumbnail">
+      <img ng-src="{{photo.thumbnailUrl}}" class="img-thumbnail">
+    </a>
+  </div>
+</div>

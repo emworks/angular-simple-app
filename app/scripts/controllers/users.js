@@ -8,10 +8,6 @@
  * Controller of the angularSimpleApp
  */
 angular.module('angularSimpleApp')
-  .controller('UsersCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('UsersCtrl', function($scope, Users){
+    $scope.users = Users.query();
   });
