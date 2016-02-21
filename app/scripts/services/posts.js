@@ -8,16 +8,8 @@
  * Factory in the angularSimpleApp.
  */
 angular.module('angularSimpleApp')
-  .factory('Posts', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
+  .factory('Posts', function ($resource, config) {
+    return $resource(config.endpoint + '/posts/:id', {
+      userId: '@id'
+    });
   });
