@@ -13,7 +13,10 @@ angular
     'ngAnimate',
     'ngMessages',
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap',
+    'bootstrapLightbox',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
