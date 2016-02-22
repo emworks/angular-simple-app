@@ -423,9 +423,21 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    less: {
+      development: {
+        options: {
+          paths: ["app/styles"]
+        },
+        files: {
+          "app/styles/main.css": "app/styles/main.less"
+        }
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -458,6 +470,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'less',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',

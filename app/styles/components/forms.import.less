@@ -1,0 +1,14 @@
+.ng-invalid.ng-dirty, .ng-invalid.ng-touched.ng-empty,
+.ng-submitted .ng-invalid {
+  border-color: @color-red;
+}
+
+.ng-valid.ng-dirty:not(.ng-empty) {
+  border-color: @color-green;
+}
+
+.required label::after {
+  content: "*";
+  color: @color-red;
+  margin-left: 2px;
+}

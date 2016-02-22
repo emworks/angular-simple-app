@@ -1,0 +1,38 @@
+/** Layout styles (header, footer) */
+
+.header, .footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/** Make our pages be full width and full height positioned absolutely
+    so that the pages can overlap each other as they enter and leave */
+.page {
+  bottom: 0;
+  padding-top: 200px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  h1 {
+    font-size: 60px;
+  }
+  a {
+    margin-top:50px;
+  }
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid @color-gray;
+}
+
+/** Animations */
+.ng-enter {
+  animation: scaleUp 0.5s both ease-in;
+  z-index: 8888;
+}
+.ng-leave {
+  animation: rotateFall 0.5s both ease-in; z-index: 9999;
+}
