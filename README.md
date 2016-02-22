@@ -2,7 +2,7 @@
 
 A scalable AngularJS application based on [yo angular generator](https://github.com/yeoman/generator-angular). There are examples of fake Rest API, structured Less and a couple of plugins (Lightbox, Google Maps).
 
-Demo is [here](http://emworks.github.io/angular-simple-app).
+[Demo](http://emworks.github.io/angular-simple-app).
 
 ## Build & development
 
