@@ -9,11 +9,13 @@
  */
 angular.module('angularSimpleApp')
   .controller('HeaderCtrl', function ($scope, $uibModal, $location) {
+    // collapse main menu
     $scope.isCollapsed = true;
+    // check if menu item is active
     $scope.isActive = function(path){
       return $location.path().substr(0, path.length) === path;
     };
-    $scope.open = function(size){
+    $scope.openRegisterForm = function(size){
       $uibModal.open({
         animation: true,
         templateUrl: 'views/register.html',

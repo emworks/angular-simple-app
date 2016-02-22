@@ -19,6 +19,7 @@ angular
     'uiGmapgoogle-maps'
   ])
   .constant('config', {
+    // Fake Online REST API
     endpoint: 'http://jsonplaceholder.typicode.com'
   })
   .config(function ($routeProvider) {
