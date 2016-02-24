@@ -7,7 +7,9 @@
       {{post.body}}
     </p>
     <p class="ta-right">
-      <a href="#/users/{{post.userId}}">{{users[post.userId].name}}</a>
+      <a href="#/users/{{post.userId}}">
+        <em>{{users[post.userId].name}}</em>
+      </a>
     </p>
   </li>
 </ul>

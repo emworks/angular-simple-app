@@ -1,13 +1,13 @@
-{{albums}}
-
-<!-- <ul class="list-group">
-  <li class="list-group-item" ng-repeat="album in data">
-    <a href="#/albums/{{album.id}}">
-      <h3>{{album.title}}</h3>
-      <a href="#/users/{{album.userId}}">{{album.userId}}</a>
-      <p>
-        {{album.body}}
-      </p>
+<div class="row">
+  <div ng-repeat="album in albums" class="col-xs-6 col-md-4">
+    <a href="#/albums/{{album.id}}" class="thumbnail">
+      <img src="https://vk.com/images/camera_400.png" alt="" class="img-thumbnail">
+      <span class="thumbnail-info">
+        {{album.title}}<br>
+        <span class="fa-right">
+          <em>{{users[album.userId].name}}</em>
+        </span>
+      </span>
     </a>
-  </li>
-</ul> -->
+  </div>
+</div>

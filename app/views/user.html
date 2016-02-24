@@ -3,7 +3,7 @@
     <div class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object" src="https://vk.com/images/camera_400.png" alt="" width="100">
+          <img class="media-object" src="https://vk.com/images/camera_400.png" alt="" width="150">
         </a>
       </div>
       <div class="media-body">
@@ -17,18 +17,23 @@
           <span class="glyphicon glyphicon-globe"></span>
           <a href="{{user.website}}" target="_blank">{{user.website}}</a><br>
           <span class="glyphicon glyphicon-map-marker"></span>
-          <span ng-click="showMap()">Show map</span>
+          <a href ng-click="showMap()">Show map</a>
         </p>
       </div>
     </div>
   </div>
 </div>
 
-<ul ng-show="albums[0]">
-  <li ng-repeat="album in albums">
-    <a href="#/albums/{{album.id}}">{{album.title}}</a>
-  </li>
-</ul>
+<div class="row">
+  <div ng-repeat="album in albums" class="col-xs-4 col-md-2" ng-show="albums[0]">
+    <a href="#/albums/{{album.id}}" class="thumbnail">
+      <img src="https://vk.com/images/camera_400.png" alt="" class="img-thumbnail">
+      <span class="thumbnail-info">
+        {{album.title}}<br>
+      </span>
+    </a>
+  </div>
+</div>
 
 <div class="list-group" ng-show="posts[0]">
   <a class="list-group-item" ng-repeat="post in posts" href="#/posts/{{post.id}}">
