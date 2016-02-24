@@ -22,7 +22,7 @@
 
     <app-header></app-header>
 
-    <div class="container">
+    <div id="main" class="container" ng-class="{ preloader: isLoading }">
       <div ng-view=""></div>
     </div>
 
