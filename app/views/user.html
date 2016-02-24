@@ -1,9 +1,12 @@
 <div class="panel panel-default" ng-show="user.id">
+  <div class="panel-heading">
+    <h3 class="panel-title">User info</h3>
+  </div>
   <div class="panel-body">
     <div class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object" src="https://vk.com/images/camera_400.png" alt="" width="150">
+          <img class="media-object" src="https://vk.com/images/camera_400.png" alt="" width="200">
         </a>
       </div>
       <div class="media-body">
@@ -24,30 +27,36 @@
   </div>
 </div>
 
-<div class="row" ng-show="albums[0]">
-  <div class="col-md-12">
-    <h3>Albums</h3>
+<div class="panel panel-default" ng-show="albums[0]">
+  <div class="panel-heading">
+    <h3 class="panel-title">Albums</h3>
   </div>
-  <div ng-repeat="album in albums" class="col-xs-4 col-md-2">
-    <a href="#/albums/{{album.id}}" class="thumbnail">
-      <img src="https://vk.com/images/camera_400.png" alt="" class="img-thumbnail">
-      <span class="thumbnail-info">
-        {{album.title}}<br>
-      </span>
-    </a>
+  <div class="panel-body">
+    <div class="row">
+      <div ng-repeat="album in albums" class="col-xs-4 col-md-2">
+        <a href="#/albums/{{album.id}}" class="thumbnail">
+          <img src="https://vk.com/images/camera_400.png" alt="" class="img-thumbnail">
+          <span class="thumbnail-info">
+            {{album.title}}<br>
+          </span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="row" ng-show="posts[0]">
-  <div class="col-md-12">
-    <h3>Posts</h3>
+<div class="panel panel-default" ng-show="posts[0]">
+  <div class="panel-heading">
+    <h3 class="panel-title">Posts</h3>
   </div>
-  <div class="list-group col-md-12">
-    <a class="list-group-item" ng-repeat="post in posts" href="#/posts/{{post.id}}">
-      <h3>{{post.title}}</h3>
-      <p>
-        {{post.body}}
-      </p>
-    </a>
+  <div class="panel-body no-padding">
+    <div class="list-group">
+      <a class="list-group-item" ng-repeat="post in posts" href="#/posts/{{post.id}}">
+        <h3>{{post.title}}</h3>
+        <p>
+          {{post.body}}
+        </p>
+      </a>
+    </div>
   </div>
 </div>

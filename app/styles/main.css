@@ -35,6 +35,12 @@
     -webkit-transform: scale(0.8);
   }
 }
+@keyframes scaleOut {
+  to {
+    opacity: 0.6;
+    -webkit-transform: scale(0.8);
+  }
+}
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
@@ -88,6 +94,9 @@
 .no-margin {
   margin: 0;
 }
+.no-padding {
+  padding: 0;
+}
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -137,15 +146,30 @@ a {
   z-index: 8888;
 }
 .ng-leave {
-  animation: rotateFall 0.5s both ease-in;
+  animation: scaleOut 0.5s both ease-in;
   z-index: 9999;
 }
 .angular-google-map-container {
   height: 400px;
 }
+.panel {
+  border: 0 none;
+  box-shadow: none;
+}
+.panel-default > .panel-heading {
+  background: none;
+  padding: 10px 0;
+}
+.panel-title {
+  font-size: 24px;
+}
 .list-group-item {
   border: 0 none;
   border-top: 1px solid #ddd;
+  padding: 20px 15px 15px;
+}
+.list-group-item:first-child {
+  border-top: 0 none;
 }
 .thumbnail {
   position: relative;
