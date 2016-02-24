@@ -143,6 +143,10 @@ a {
 .angular-google-map-container {
   height: 400px;
 }
+.list-group-item {
+  border: 0 none;
+  border-top: 1px solid #ddd;
+}
 .thumbnail {
   position: relative;
   padding: 0;

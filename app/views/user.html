@@ -24,8 +24,11 @@
   </div>
 </div>
 
-<div class="row">
-  <div ng-repeat="album in albums" class="col-xs-4 col-md-2" ng-show="albums[0]">
+<div class="row" ng-show="albums[0]">
+  <div class="col-md-12">
+    <h3>Albums</h3>
+  </div>
+  <div ng-repeat="album in albums" class="col-xs-4 col-md-2">
     <a href="#/albums/{{album.id}}" class="thumbnail">
       <img src="https://vk.com/images/camera_400.png" alt="" class="img-thumbnail">
       <span class="thumbnail-info">
@@ -35,11 +38,16 @@
   </div>
 </div>
 
-<div class="list-group" ng-show="posts[0]">
-  <a class="list-group-item" ng-repeat="post in posts" href="#/posts/{{post.id}}">
-    <h3>{{post.title}}</h3>
-    <p>
-      {{post.body}}
-    </p>
-  </a>
+<div class="row" ng-show="posts[0]">
+  <div class="col-md-12">
+    <h3>Posts</h3>
+  </div>
+  <div class="list-group col-md-12">
+    <a class="list-group-item" ng-repeat="post in posts" href="#/posts/{{post.id}}">
+      <h3>{{post.title}}</h3>
+      <p>
+        {{post.body}}
+      </p>
+    </a>
+  </div>
 </div>
